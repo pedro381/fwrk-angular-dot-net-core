@@ -1,0 +1,107 @@
+<div class="row">
+    <div class="col-md-3">
+        <div class="form-group">
+            <div class="row">
+                <label class="col-md-3 control-label">CEP:<span class="red">*</span></label>
+                <div class="col-md-9">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" 
+                        [(ngModel)]="endereco.cep" 
+                        (blur)="obterPorCep()"
+                        [ngClass]="{'is-invalid': !endereco.enderecoValidation.cep } " 
+                        (blur)="endereco.enderecoValidation.cep = endereco.cep ? true : false;" >
+                        <div class="input-group-append">
+                            <a class="btn btn-primary" (click)="obterPorCep()">
+                                <span><span class="fa fa-search" ></span></span>
+                            </a>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="form-group">  
+            <a class="btn btn-danger" (click)="excluirEndereco()"  ><i class="fa fa-trash"></i> </a>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-3">
+        <div class="form-group">
+            <div class="row">
+                <label class="col-md-12 control-label" >Rua:<span class="red">*</span></label>
+                <div class="col-md-12">
+                    <input class="form-control" type="text" 
+                    [(ngModel)]="endereco.rua"
+                    [ngClass]="{'is-invalid': !endereco.enderecoValidation.rua } " 
+                    (blur)="endereco.enderecoValidation.rua = endereco.rua ? true : false;"  />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="form-group">
+            <div class="row">
+                <label class="col-md-12 control-label" >Número:<span class="red">*</span></label>
+                <div class="col-md-12">
+                    <input class="form-control" type="text" 
+                    [(ngModel)]="endereco.numero"
+                    [ngClass]="{'is-invalid': !endereco.enderecoValidation.numero } " 
+                    (blur)="endereco.enderecoValidation.numero = endereco.numero ? true : false;"  />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="form-group">
+            <div class="row">
+                <label class="col-md-12 control-label" >Complemento:</label>
+                <div class="col-md-12">
+                    <input class="form-control" type="text" 
+                    [(ngModel)]="endereco.complemento"  />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="form-group">
+            <div class="row">
+                <label class="col-md-12 control-label" >Bairro:<span class="red">*</span></label>
+                <div class="col-md-12">
+                    <input class="form-control" type="text" 
+                    [(ngModel)]="endereco.bairro"
+                    [ngClass]="{'is-invalid': !endereco.enderecoValidation.bairro } " 
+                    (blur)="endereco.enderecoValidation.bairro = endereco.bairro ? true : false;"  />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="form-group">
+            <div class="row">
+                <label class="col-md-12 control-label" >Cidade:<span class="red">*</span></label>
+                <div class="col-md-12">
+                    <input class="form-control" type="text" 
+                    [(ngModel)]="endereco.cidade"
+                    [ngClass]="{'is-invalid': !endereco.enderecoValidation.cidade } " 
+                    (blur)="endereco.enderecoValidation.cidade = endereco.cidade ? true : false;"  />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-1">
+        <div class="form-group">
+            <div class="row">
+                <label class="col-md-12 control-label" >UF:<span class="red">*</span></label>
+                <div class="col-md-12">
+                    <input class="form-control" type="text" 
+                    [(ngModel)]="endereco.uf"
+                    [ngClass]="{'is-invalid': !endereco.enderecoValidation.uf } " 
+                    (blur)="endereco.enderecoValidation.uf = endereco.uf ? true : false;"  />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

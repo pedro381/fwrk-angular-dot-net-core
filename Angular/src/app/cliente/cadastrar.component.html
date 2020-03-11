@@ -1,0 +1,13 @@
+<div class="container main-container">
+    <h4>Cadastrar Cliente</h4>
+    <hr />
+    <cliente-formulario [cliente]="cliente" [clienteValidation]="clienteValidation"></cliente-formulario>    
+    <hr />
+    <div class="row">
+        <div class="col-md-12">
+            <a class="btn btn-success"(click)="salvar()" style="color: white;">
+                <span><span class="fa fa-save" ></span> Salvar</span>
+            </a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,88 @@
+
+<div class="card card-body"  style="margin-bottom: 10px;">
+
+    <div class="row">
+        <div class="col-md-3">
+            <div class="form-group">
+                <div class="row">
+                    <label class="col-md-12 control-label" >Nome:<span class="red">*</span></label>
+                    <div class="col-md-12" >                 
+                        <input   class="form-control" type="text" 
+                        [(ngModel)]="cliente.nome"
+                        [ngClass]="{'is-invalid': !clienteValidation.nome } " 
+                        (blur)="clienteValidation.nome = cliente.nome ? true : false;" />                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <div class="row">
+                    <label class="col-md-12 control-label" >Data de Nascimento:<span class="red">*</span></label>
+                    <div class="col-md-12">
+                        <input type="date" class="form-control" 
+                        [ngModel]="cliente.nascimento | date:'yyyy-MM-dd'" 
+                        (ngModelChange)="cliente.nascimento = $event" 
+                        [ngClass]="{'is-invalid': !clienteValidation.nascimento } " 
+                        (blur)="clienteValidation.nascimento = cliente.nascimento ? true : false;">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="form-group">
+                <div class="row">
+                    <label class="col-md-12 control-label" >Estado Civil:<span class="red">*</span></label>
+                    <div class="col-md-12">
+                        <ng-multiselect-dropdown  
+                            [placeholder]="'Selecione...'"               
+                            [data]="estadoCivilList"
+                            [(ngModel)]="estadoCivilSelecionado"
+                            [settings]="ddlEstadoCivilConfig"
+                            (onSelect)="onItemSelect($event)"
+                            (onDeSelect)="onItemDeSelect($event)"
+                            [ngClass]="{'is-invalid': !clienteValidation.estadoCivil } " >
+                        </ng-multiselect-dropdown>
+                    </div>
+                </div>
+            </div>
+        </div>    
+        <div class="col-md-3">
+            <div class="form-group">
+                <div class="row">
+                    <label class="col-md-12 control-label" >Nome da Mãe:<span class="red">*</span></label>
+                    <div class="col-md-12">
+                        <input class="form-control" type="text" 
+                        [(ngModel)]="cliente.nomeMae" 
+                        [ngClass]="{'is-invalid': !clienteValidation.nomeMae } " 
+                        (blur)="clienteValidation.nomeMae = cliente.nomeMae ? true : false;" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1">
+            <div class="form-group">
+                <div class="row">
+                    <label class="col-md-12 control-label" >Ativo:<span class="red">*</span></label>
+                    <div class="col-md-12">
+                        <a [ngClass]="cliente.ativo ? 'btn btn-success' : 'btn btn-danger'" (click)="mudarStatus()" href="javascript:void(0)">
+                        <span><span [ngClass]="cliente.ativo ? 'fa fa-toggle-on' : 'fa fa-toggle-off'"> </span></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </div>
+</div>
+
+<div class="row"> 
+    <div class="col-md-12">
+        <div class="form-group">
+            <a class="btn btn-success" style="color: white;" (click)="adicionarEndereco()"  ><i class="fa fa-plus"></i> Novo Endereço</a>
+        </div>
+    </div> 
+</div>
+
+<div class="card card-body" *ngFor="let endereco of cliente.enderecos;" style="margin-bottom: 10px;">
+<endereco-formulario  [endereco]="endereco"  (excluir)="excluirEndereco($event)" ></endereco-formulario>
+</div>
