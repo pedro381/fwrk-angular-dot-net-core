@@ -17,7 +17,6 @@ import { EnderecoFormularioComponent } from '../endereco/componentes/endereco-fo
 import { ClienteRoutingModule } from './cliente.route';
 import { ClienteAppComponent } from './cliente.app.component';
 import { ClienteService } from './services/cliente.service';
-import { ClientesResolve } from './services/cliente.resolve';
 import { EnderecoService } from '../endereco/services/endereco.service';
 
 @NgModule({
@@ -39,7 +38,6 @@ import { EnderecoService } from '../endereco/services/endereco.service';
     ],
     providers: [
         ClienteService,
-        ClientesResolve,
         EnderecoService
     ],
     exports: []

@@ -2,7 +2,7 @@ import { EstadoCivil } from './EstadoCivil';
 import { Endereco } from 'src/app/endereco/models/endereco';
 
 export class Cliente {
-    id: number;
+    id: string;
     nome: string;
     nascimento: Date;
     estadoCivil: EstadoCivil;

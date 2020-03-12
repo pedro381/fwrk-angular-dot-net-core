@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { FiltroCliente } from './models/filtro-cliente';
 import { Cliente } from './models/cliente';
 import { IDropdownSettings } from 'ng-multiselect-dropdown';
@@ -10,7 +10,7 @@ import { ClienteService } from './services/cliente.service';
   styles: []
 })
 export class ListarClienteComponent implements OnInit {
-  clientes: Cliente[];
+  clientes: Cliente[]= [];
   filtro: FiltroCliente;
 
   estadoCivilList = [];
@@ -18,13 +18,21 @@ export class ListarClienteComponent implements OnInit {
   ddlEstadoCivilConfig: IDropdownSettings = {};
 
   constructor(private clienteService: ClienteService) {
-    this.filtro = new FiltroCliente();
-    this.clientes = this.clienteService.clientes;    
-    this.estadoCivilList = this.clienteService.estadoCivilList;
+    this.filtro = new FiltroCliente();   
+    
+    this.clienteService.ObterTodosEstadoCivil()
+    .subscribe(
+      data => {
+        this.estadoCivilList = data;
+        this.PesquisarCliente();
+      },
+      err => {
+        console.log(err);
+      }
+    );
   }
 
   ngOnInit() {
-
     this.ddlEstadoCivilConfig = {
       singleSelection: false,
       idField: 'id',
@@ -39,14 +47,15 @@ export class ListarClienteComponent implements OnInit {
   }
 
   PesquisarCliente() {
-    this.filtro.estadoCivil = this.selectedItems.map(e => e.item_id); 
-    console.log(this.filtro);
-
-
-    this.clientes = this.clienteService.clientes.filter(c => c.nome == this.filtro.nome);
-    
+    this.filtro.estadoCivil = this.selectedItems.map(e => e.id);     
+    this.clienteService.ObterClientePorEstadoCivilNome(this.filtro.estadoCivil,  this.filtro.nome)
+    .subscribe(
+      data => {
+        this.clientes = this.clienteService.mapperServerClienteList(data);
+      },
+      err => {
+        console.log(err);
+      }
+    );    
   }
-
 }
-
-

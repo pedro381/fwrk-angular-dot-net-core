@@ -7,7 +7,7 @@
                 <div class="row">
                     <label class="col-md-12 control-label" >Nome:<span class="red">*</span></label>
                     <div class="col-md-12" >                 
-                        <input   class="form-control" type="text" 
+                        <input   class="form-control" type="text" minlength="2" maxlength="200"
                         [(ngModel)]="cliente.nome"
                         [ngClass]="{'is-invalid': !clienteValidation.nome } " 
                         (blur)="clienteValidation.nome = cliente.nome ? true : false;" />                        
@@ -52,7 +52,7 @@
                 <div class="row">
                     <label class="col-md-12 control-label" >Nome da Mãe:<span class="red">*</span></label>
                     <div class="col-md-12">
-                        <input class="form-control" type="text" 
+                        <input class="form-control" type="text"  minlength="2" maxlength="200"
                         [(ngModel)]="cliente.nomeMae" 
                         [ngClass]="{'is-invalid': !clienteValidation.nomeMae } " 
                         (blur)="clienteValidation.nomeMae = cliente.nomeMae ? true : false;" />

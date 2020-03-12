@@ -16,7 +16,7 @@
               <td>{{cliente.estadoCivil.descricao}}</td>
               <td>{{cliente.nomeMae}}</td>
               <td>
-                <a [ngClass]="cliente.ativo ? 'btn btn-success' : 'btn btn-danger'" (click)="mudarStatus(cliente)" href="javascript:void(0)">
+                <a [ngClass]="cliente.ativo ? 'btn btn-success' : 'btn btn-danger'" (click)="mudarStatus(cliente.id)" href="javascript:void(0)">
                   <span><span [ngClass]="cliente.ativo ? 'fa fa-toggle-on' : 'fa fa-toggle-off'"> </span></span>
                 </a>
               </td>

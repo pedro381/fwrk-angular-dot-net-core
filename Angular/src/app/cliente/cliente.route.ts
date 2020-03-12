@@ -6,7 +6,6 @@ import { EditarClienteComponent } from './editar.component';
 import { ListarClienteComponent } from './listar.component';
 
 import { ClienteAppComponent } from './cliente.app.component';
-import { ClientesResolve } from './services/cliente.resolve';
 
 const clienteRouterConfig: Routes = [
     {
@@ -16,12 +15,6 @@ const clienteRouterConfig: Routes = [
             { 
                 path: 'listar', 
                 component: ListarClienteComponent,
-                resolve: {
-                    clientes: ClientesResolve
-                },
-                data: {
-                    teste: 'informação'
-                }
             },
             { path: 'cadastrar', component: CadastrarClienteComponent },
             { path: 'editar/:id', component: EditarClienteComponent }

@@ -1,5 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { Cliente } from '../models/cliente';
+import { ClienteService } from '../services/cliente.service';
 
 @Component({
   selector: 'cliente-lista',
@@ -9,17 +10,36 @@ import { Cliente } from '../models/cliente';
 export class ListaClienteComponent implements OnInit {
   @Input()
   clientes: Cliente[];
+  
+  @Output()
+  pesquisar: EventEmitter<any> = new EventEmitter();
 
-  constructor() { }
+  constructor(private clienteService: ClienteService) { }
 
   ngOnInit() {
   }
 
-  mudarStatus(cliente: Cliente){
-    cliente.ativo = !cliente.ativo;
+  mudarStatus(id: string){ 
+    this.clienteService.mudarStatus(id)
+    .subscribe(
+      data => {
+        this.pesquisar.emit();
+      },
+      err => {
+        console.log(err);
+      }
+    ); 
   }
 
-  excluirCliente(id: number){
-    
+  excluirCliente(id: string){    
+    this.clienteService.excluir(id)
+    .subscribe(
+      data => {
+        this.pesquisar.emit();
+      },
+      err => {
+        console.log(err);
+      }
+    ); 
   }
 }

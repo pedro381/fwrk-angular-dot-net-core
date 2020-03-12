@@ -26,14 +26,16 @@ export class CadastrarClienteComponent implements OnInit {
     
     let valid = this.clienteValidation.isValid(this.cliente);
     if(valid){
-      let ids: number[] = this.clienteService.clientes.map(function(o) { return o.id; });
-      this.cliente.id =  Math.max(...ids) + 1; 
-      this.clienteService.adicionar(this.cliente);
+      this.clienteService.adicionar(this.cliente)
+      .subscribe(
+        data => {
+          this.router.navigate(['/clientes']);
+        },
+        err => {
+          console.log(err);
+        }
+      );
 
-      // fazer comunicacao com backend
-
-      this.router.navigate(['/clientes']);
-      //this.router.navigateByUrl('/clientes');
     }
   }
 

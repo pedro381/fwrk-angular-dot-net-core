@@ -3,6 +3,7 @@ import { Cliente } from './models/cliente';
 import { ClienteService } from './services/cliente.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ClienteValidation } from './models/cliente-validate';
+import { EstadoCivil } from './models/EstadoCivil';
 
 @Component({
   selector: 'app-cliente-editar',
@@ -12,26 +13,45 @@ import { ClienteValidation } from './models/cliente-validate';
 export class EditarClienteComponent implements OnInit {
   cliente: Cliente;
   clienteValidation: ClienteValidation = new ClienteValidation();
+  estadoCivilSelecionado: EstadoCivil[];
   
   constructor(
     private route: ActivatedRoute, 
     private clienteService: ClienteService,
-    private router: Router) { }
+    private router: Router) { 
+      this.cliente = new Cliente;
+      this.route.params
+        .subscribe(params => {
+          this.clienteService.obterPorId(params['id'])
+            .then(
+              data => {
+                this.cliente =  this.clienteService.mapperServerCliente(data);                
+                if(this.cliente.estadoCivil){
+                  this.estadoCivilSelecionado = [this.cliente.estadoCivil];
+                }
+              },
+              err => {
+                console.log(err);
+              }
+            );
+        });
+    }
 
   ngOnInit() {
-    this.route.params
-      .subscribe(params => {
-        this.cliente = this.clienteService.obterPorId(params['id']);
-      });
   }
 
   salvar(){
     let valid = this.clienteValidation.isValid(this.cliente);
     if(valid){
-      // fazer comunicacao com backend
-
-      this.router.navigate(['/clientes']);
-      //this.router.navigateByUrl('/clientes');
+      this.clienteService.atualizar(this.cliente)
+      .subscribe(
+        data => {
+          this.router.navigate(['/clientes']);
+        },
+        err => {
+          console.log(err);
+        }
+      );
     }
   }
 

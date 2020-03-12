@@ -21,7 +21,6 @@ export class EnderecoFormularioComponent implements OnInit {
 
   ngOnInit() {
     this.endereco.enderecoValidation = new EnderecoValidation();
-    console.log(this.endereco);
   }
 
   obterPorCep(){

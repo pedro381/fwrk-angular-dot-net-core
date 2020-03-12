@@ -5,7 +5,7 @@
                 <label class="col-md-3 control-label">CEP:<span class="red">*</span></label>
                 <div class="col-md-9">
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" 
+                        <input type="text" class="form-control"  minlength="8" maxlength="8"
                         [(ngModel)]="endereco.cep" 
                         (blur)="obterPorCep()"
                         [ngClass]="{'is-invalid': !endereco.enderecoValidation.cep } " 
@@ -33,7 +33,7 @@
             <div class="row">
                 <label class="col-md-12 control-label" >Rua:<span class="red">*</span></label>
                 <div class="col-md-12">
-                    <input class="form-control" type="text" 
+                    <input class="form-control" type="text"  minlength="2" maxlength="200"
                     [(ngModel)]="endereco.rua"
                     [ngClass]="{'is-invalid': !endereco.enderecoValidation.rua } " 
                     (blur)="endereco.enderecoValidation.rua = endereco.rua ? true : false;"  />
@@ -46,7 +46,7 @@
             <div class="row">
                 <label class="col-md-12 control-label" >Número:<span class="red">*</span></label>
                 <div class="col-md-12">
-                    <input class="form-control" type="text" 
+                    <input class="form-control" type="text"  minlength="1" maxlength="50"
                     [(ngModel)]="endereco.numero"
                     [ngClass]="{'is-invalid': !endereco.enderecoValidation.numero } " 
                     (blur)="endereco.enderecoValidation.numero = endereco.numero ? true : false;"  />
@@ -70,7 +70,7 @@
             <div class="row">
                 <label class="col-md-12 control-label" >Bairro:<span class="red">*</span></label>
                 <div class="col-md-12">
-                    <input class="form-control" type="text" 
+                    <input class="form-control" type="text"  minlength="2" maxlength="100"
                     [(ngModel)]="endereco.bairro"
                     [ngClass]="{'is-invalid': !endereco.enderecoValidation.bairro } " 
                     (blur)="endereco.enderecoValidation.bairro = endereco.bairro ? true : false;"  />
@@ -83,7 +83,7 @@
             <div class="row">
                 <label class="col-md-12 control-label" >Cidade:<span class="red">*</span></label>
                 <div class="col-md-12">
-                    <input class="form-control" type="text" 
+                    <input class="form-control" type="text"  minlength="2" maxlength="100"
                     [(ngModel)]="endereco.cidade"
                     [ngClass]="{'is-invalid': !endereco.enderecoValidation.cidade } " 
                     (blur)="endereco.enderecoValidation.cidade = endereco.cidade ? true : false;"  />
@@ -96,7 +96,7 @@
             <div class="row">
                 <label class="col-md-12 control-label" >UF:<span class="red">*</span></label>
                 <div class="col-md-12">
-                    <input class="form-control" type="text" 
+                    <input class="form-control" type="text"  minlength="2" maxlength="2"
                     [(ngModel)]="endereco.uf"
                     [ngClass]="{'is-invalid': !endereco.enderecoValidation.uf } " 
                     (blur)="endereco.enderecoValidation.uf = endereco.uf ? true : false;"  />

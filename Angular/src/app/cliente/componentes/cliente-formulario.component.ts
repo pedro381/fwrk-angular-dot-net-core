@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output } from '@angular/core';
+import { Component, OnInit, Input, Output, AfterViewInit } from '@angular/core';
 import { IDropdownSettings } from 'ng-multiselect-dropdown';
 import { Cliente } from '../models/cliente';
 import { ClienteService } from '../services/cliente.service';
@@ -14,7 +14,7 @@ import { ClienteValidation } from '../models/cliente-validate';
   templateUrl: './cliente-formulario.component.html',
   styles: []
 })
-export class FormularioClienteComponent implements OnInit {
+export class FormularioClienteComponent implements OnInit, AfterViewInit {
   @Input()
   cliente: Cliente;
   @Input()
@@ -24,11 +24,22 @@ export class FormularioClienteComponent implements OnInit {
   dt: Date;
 
   estadoCivilList = [];
+  @Input()
+  @Output()
   estadoCivilSelecionado: EstadoCivil[];
   ddlEstadoCivilConfig: IDropdownSettings = {};
 
   constructor(private clienteService: ClienteService) { 
-    this.estadoCivilList = this.clienteService.estadoCivilList;
+
+    this.clienteService.ObterTodosEstadoCivil()
+    .subscribe(
+      data => {
+        this.estadoCivilList = data;
+      },
+      err => {
+        console.log(err);
+      }
+    );
 
     this.ddlEstadoCivilConfig = {
       singleSelection: true,
@@ -38,14 +49,12 @@ export class FormularioClienteComponent implements OnInit {
       searchPlaceholderText: 'Buscar',
       allowSearchFilter: true
     };
-
   }
 
   ngOnInit() {
-    if(this.cliente.estadoCivil){
-      this.estadoCivilSelecionado = [this.cliente.estadoCivil];
-    }
+  }
 
+  ngAfterViewInit(){
     this.dt = this.cliente.nascimento;
   }
   

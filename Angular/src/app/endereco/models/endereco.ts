@@ -1,7 +1,7 @@
 import { EnderecoValidation } from './endereco-validate';
 
 export class Endereco {
-    id: number;
+    id: string;
     rua: string;
     numero: string;
     complemento: string;
