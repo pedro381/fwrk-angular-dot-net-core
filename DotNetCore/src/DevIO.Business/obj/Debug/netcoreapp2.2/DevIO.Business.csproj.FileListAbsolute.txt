@@ -1,8 +1,0 @@
-C:\Users\ped.souza\Documents\GitHub\fwrk-angular-dot-net-core\DotNetCore\src\DevIO.Business\bin\Debug\netcoreapp2.2\DevIO.Business.deps.json
-C:\Users\ped.souza\Documents\GitHub\fwrk-angular-dot-net-core\DotNetCore\src\DevIO.Business\bin\Debug\netcoreapp2.2\DevIO.Business.dll
-C:\Users\ped.souza\Documents\GitHub\fwrk-angular-dot-net-core\DotNetCore\src\DevIO.Business\bin\Debug\netcoreapp2.2\DevIO.Business.pdb
-C:\Users\ped.souza\Documents\GitHub\fwrk-angular-dot-net-core\DotNetCore\src\DevIO.Business\obj\Debug\netcoreapp2.2\DevIO.Business.csprojAssemblyReference.cache
-C:\Users\ped.souza\Documents\GitHub\fwrk-angular-dot-net-core\DotNetCore\src\DevIO.Business\obj\Debug\netcoreapp2.2\DevIO.Business.AssemblyInfoInputs.cache
-C:\Users\ped.souza\Documents\GitHub\fwrk-angular-dot-net-core\DotNetCore\src\DevIO.Business\obj\Debug\netcoreapp2.2\DevIO.Business.AssemblyInfo.cs
-C:\Users\ped.souza\Documents\GitHub\fwrk-angular-dot-net-core\DotNetCore\src\DevIO.Business\obj\Debug\netcoreapp2.2\DevIO.Business.dll
-C:\Users\ped.souza\Documents\GitHub\fwrk-angular-dot-net-core\DotNetCore\src\DevIO.Business\obj\Debug\netcoreapp2.2\DevIO.Business.pdb
