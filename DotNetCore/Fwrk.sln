@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fwrk.Data", "src\Fwrk.Data\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fwrk.Api", "src\Fwrk.Api\Fwrk.Api.csproj", "{C1709546-6447-421A-9049-3B53006C794D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fwrk.XUnitTest", "Fwrk.XUnitTest\Fwrk.XUnitTest.csproj", "{7C6F0CE8-D9AF-4A02-B078-EAF0FF1ABBF2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fwrk.XUnitTest", "src\Fwrk.XUnitTest\Fwrk.XUnitTest.csproj", "{7C6F0CE8-D9AF-4A02-B078-EAF0FF1ABBF2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
