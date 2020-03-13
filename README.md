@@ -1,5 +1,7 @@
 # fwrk-angular-dot-net-core
 
+YouTube: [App Angular & .NET Core](https://youtu.be/mWZBKsMvzW0)
+
 ### Instalação do front-end
 
 Instale as dependências e inicie o aplicativo.
