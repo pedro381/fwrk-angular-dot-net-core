@@ -33,7 +33,7 @@ http://localhost:4200
 
 Instale as dependências e inicie o aplicativo.
 
-###### run package-manager-console => DevIO.Data
+###### run package-manager-console => Fwrk.Data
 ```sh
 $ add-migration "CriarBd"
 ```
