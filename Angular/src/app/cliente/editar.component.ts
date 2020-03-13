@@ -4,6 +4,7 @@ import { ClienteService } from './services/cliente.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ClienteValidation } from './models/cliente-validate';
 import { EstadoCivil } from './models/EstadoCivil';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-cliente-editar',
@@ -46,11 +47,33 @@ export class EditarClienteComponent implements OnInit {
       this.clienteService.atualizar(this.cliente)
       .subscribe(
         data => {
-          this.router.navigate(['/clientes']);
+          Swal.fire({
+            title: 'Cadastro Salvo!',
+            text: "O cadastro foi editado com sucesso!",
+            icon: 'success',
+            showCancelButton: false,
+            confirmButtonText: 'OK'
+          }).then((result) => {            
+            this.router.navigate(['/clientes']);
+          })
         },
         err => {
           console.log(err);
         }
+      );
+    }
+    else if(!this.cliente.enderecos || this.cliente.enderecos.length < 0){
+      Swal.fire(
+        'Endereço não informado!',
+        'Inclua pelo menos um endereço!',
+        'error'
+      );
+    }
+    else{
+      Swal.fire(
+        'Cadastro inválido!',
+        'Verifique os campos obrigatórios!',
+        'error'
       );
     }
   }

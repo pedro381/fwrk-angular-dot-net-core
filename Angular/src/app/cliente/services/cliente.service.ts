@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Endereco } from 'src/app/endereco/models/endereco';
 import { EnderecoValidation } from 'src/app/endereco/models/endereco-validate';
+import { environment } from 'src/environments/environment.prod';
 
 @Injectable()
 export class ClienteService {
@@ -15,19 +16,19 @@ export class ClienteService {
     
     async obterPorId(id: string){
       if(id){
-        let url = "https://localhost:5001/api/clientes/obter-cliente-por-id/" + id;
+        let url = environment.urlBaseApi + "clientes/obter-cliente-por-id/" + id;
         return this.httpClient.get<any>(url).toPromise();
       }
     }
 
     
     ObterTodosEstadoCivil(): Observable<EstadoCivil[]> {
-      let url = "https://localhost:5001/api/estadocivil/obter-todos/";
+      let url = environment.urlBaseApi + "estadocivil/obter-todos/";
       return this.httpClient.get<EstadoCivil[]>(url);
     }
 
     ObterClientePorEstadoCivilNome(estadoCivilId: string[], nome: string): Observable<any> {
-      let url = "https://localhost:5001/api/clientes/obter-cliente-por-cstado-civil-nome?nome=" + (nome ? nome : '');
+      let url = environment.urlBaseApi + "clientes/obter-cliente-por-cstado-civil-nome?nome=" + (nome ? nome : '');
       estadoCivilId.forEach(e => {
         url += "&estadoCivilId=" + e;
       });
@@ -35,22 +36,22 @@ export class ClienteService {
     }
 
     adicionar(cliente: Cliente): Observable<any> {    
-      let url = "https://localhost:5001/api/clientes/adicionar/";
+      let url = environment.urlBaseApi + "clientes/adicionar/";
       return this.httpClient.post<Cliente>(url, this.mapperCliente(cliente));
     }
 
     atualizar(cliente: Cliente): Observable<any> {    
-      let url = "https://localhost:5001/api/clientes/atualizar/" + cliente.id;
+      let url = environment.urlBaseApi + "clientes/atualizar/" + cliente.id;
       return this.httpClient.put<Cliente>(url, this.mapperCliente(cliente));
     }
 
     excluir(id: string): Observable<any> {    
-      let url = "https://localhost:5001/api/clientes/excluir/" + id;
+      let url = environment.urlBaseApi + "clientes/excluir/" + id;
       return this.httpClient.delete<any>(url);
     }
 
     mudarStatus(id: string): Observable<any> {    
-      let url = "https://localhost:5001/api/clientes/mudar-status/" + id;
+      let url = environment.urlBaseApi + "clientes/mudar-status/" + id;
       return this.httpClient.get<any>(url);
     }
 

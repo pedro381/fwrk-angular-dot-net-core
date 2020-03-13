@@ -814,23 +814,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ped.souza\\.nuget\\packages\\": {},
+    "C:\\Users\\Pedro\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ped.souza\\Documents\\GitHub\\fwrk-angular-dot-net-core\\DotNetCore\\src\\Fwrk.Business\\Fwrk.Business.csproj",
+      "projectUniqueName": "C:\\Users\\Pedro\\Documents\\GitHub\\fwrk-angular-dot-net-core\\DotNetCore\\src\\Fwrk.Business\\Fwrk.Business.csproj",
       "projectName": "Fwrk.Business",
-      "projectPath": "C:\\Users\\ped.souza\\Documents\\GitHub\\fwrk-angular-dot-net-core\\DotNetCore\\src\\Fwrk.Business\\Fwrk.Business.csproj",
-      "packagesPath": "C:\\Users\\ped.souza\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ped.souza\\Documents\\GitHub\\fwrk-angular-dot-net-core\\DotNetCore\\src\\Fwrk.Business\\obj\\",
+      "projectPath": "C:\\Users\\Pedro\\Documents\\GitHub\\fwrk-angular-dot-net-core\\DotNetCore\\src\\Fwrk.Business\\Fwrk.Business.csproj",
+      "packagesPath": "C:\\Users\\Pedro\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Pedro\\Documents\\GitHub\\fwrk-angular-dot-net-core\\DotNetCore\\src\\Fwrk.Business\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\ped.souza\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Pedro\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -866,16 +866,10 @@
           }
         },
         "imports": [
-          "net461",
-          "net462",
-          "net47",
-          "net471",
-          "net472",
-          "net48"
+          "net461"
         ],
         "assetTargetFallback": true,
-        "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.102\\RuntimeIdentifierGraph.json"
+        "warn": true
       }
     }
   }

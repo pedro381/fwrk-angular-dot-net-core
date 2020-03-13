@@ -28,3 +28,7 @@ textarea {
 .is-invalid .dropdown-btn{
     border-color: red !important;
 }
+
+.swal2-cancel.btn.btn-danger{
+    margin-right: 5px;
+}

@@ -5,8 +5,11 @@
     <hr />
     <div class="row">
         <div class="col-md-12">
-            <a class="btn btn-success"(click)="salvar()" style="color: white;">
+            <a class="btn btn-success"(click)="salvar()" style="color: white; margin-right: 5px;">
                 <span><span class="fa fa-save" ></span> Salvar</span>
+            </a>
+            <a class="btn btn-secondary" [routerLink]="['/clientes']">
+                <span><span class="fa fa-arrow-circle-left" ></span> Voltar</span>
             </a>
         </div>
     </div>

@@ -1,0 +1,9 @@
+C:\Users\Pedro\Documents\GitHub\fwrk-angular-dot-net-core\DotNetCore\src\Fwrk.Business\bin\Debug\netcoreapp2.2\Fwrk.Business.deps.json
+C:\Users\Pedro\Documents\GitHub\fwrk-angular-dot-net-core\DotNetCore\src\Fwrk.Business\bin\Debug\netcoreapp2.2\Fwrk.Business.dll
+C:\Users\Pedro\Documents\GitHub\fwrk-angular-dot-net-core\DotNetCore\src\Fwrk.Business\bin\Debug\netcoreapp2.2\Fwrk.Business.pdb
+C:\Users\Pedro\Documents\GitHub\fwrk-angular-dot-net-core\DotNetCore\src\Fwrk.Business\obj\Debug\netcoreapp2.2\Fwrk.Business.csprojAssemblyReference.cache
+C:\Users\Pedro\Documents\GitHub\fwrk-angular-dot-net-core\DotNetCore\src\Fwrk.Business\obj\Debug\netcoreapp2.2\Fwrk.Business.csproj.CoreCompileInputs.cache
+C:\Users\Pedro\Documents\GitHub\fwrk-angular-dot-net-core\DotNetCore\src\Fwrk.Business\obj\Debug\netcoreapp2.2\Fwrk.Business.AssemblyInfoInputs.cache
+C:\Users\Pedro\Documents\GitHub\fwrk-angular-dot-net-core\DotNetCore\src\Fwrk.Business\obj\Debug\netcoreapp2.2\Fwrk.Business.AssemblyInfo.cs
+C:\Users\Pedro\Documents\GitHub\fwrk-angular-dot-net-core\DotNetCore\src\Fwrk.Business\obj\Debug\netcoreapp2.2\Fwrk.Business.dll
+C:\Users\Pedro\Documents\GitHub\fwrk-angular-dot-net-core\DotNetCore\src\Fwrk.Business\obj\Debug\netcoreapp2.2\Fwrk.Business.pdb

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using Fwrk.Api.ViewModels;
@@ -25,7 +26,8 @@ namespace Fwrk.Api.Controllers
         [HttpGet("obter-todos/")]
         public async Task<IEnumerable<EstadoCivilViewModel>> ObterTodos()
         {
-            return _mapper.Map<IEnumerable<EstadoCivilViewModel>>(await _estadoCivilRepository.ObterTodos());
+            var lst = await _estadoCivilRepository.ObterTodos();
+            return _mapper.Map<IEnumerable<EstadoCivilViewModel>>(lst.OrderBy(x => x.Descricao));
         }
     }
 }
