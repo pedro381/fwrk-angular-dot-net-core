@@ -1,8 +1,8 @@
 # fwrk-angular-dot-net-core
 
-[Assista ao vídeo no YouTube]([https://www.youtube.com/watch?v=jcU1pFYKcx4](https://youtu.be/mWZBKsMvzW0?si=FWmvZe5km4ocwus2))
+[Assista ao vídeo no YouTube]([https://www.youtube.com/watch?v=jcU1pFYKcx4](https://youtu.be/mWZBKsMvzW0))
 
-[![Assista ao vídeo](https://img.youtube.com/vi/jcU1pFYKcx4/0.jpg)]([https://www.youtube.com/watch?v=jcU1pFYKcx4](https://youtu.be/mWZBKsMvzW0?si=FWmvZe5km4ocwus2))
+[![Assista ao vídeo](https://img.youtube.com/vi/mWZBKsMvzW0/0.jpg)]([https://www.youtube.com/watch?v=jcU1pFYKcx4](https://youtu.be/mWZBKsMvzW0))
 
 ---
 
