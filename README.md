@@ -1,6 +1,10 @@
 # fwrk-angular-dot-net-core
 
-YouTube: [App Angular & .NET Core](https://youtu.be/mWZBKsMvzW0)
+[Assista ao vídeo no YouTube]([https://www.youtube.com/watch?v=jcU1pFYKcx4](https://youtu.be/mWZBKsMvzW0?si=FWmvZe5km4ocwus2))
+
+[![Assista ao vídeo](https://img.youtube.com/vi/jcU1pFYKcx4/0.jpg)]([https://www.youtube.com/watch?v=jcU1pFYKcx4](https://youtu.be/mWZBKsMvzW0?si=FWmvZe5km4ocwus2))
+
+---
 
 ### Instalação do front-end
 
