@@ -4,11 +4,6 @@
 
 [![Assista ao vídeo](https://img.youtube.com/vi/mWZBKsMvzW0/0.jpg)](https://www.youtube.com/watch?v=mWZBKsMvzW0)
 
-<a href="https://www.youtube.com/watch?v=mWZBKsMvzW0" target="_blank" rel="noopener noreferrer">
-  <img src="https://img.youtube.com/vi/mWZBKsMvzW0/0.jpg" alt="Assista ao vídeo" width="560">
-</a>
-
-
 ---
 
 ### Instalação do front-end
